@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem
+  }
+}
+
+.mycontainer {
+  width: 100%;
+}
+@media (min-width: 540px) {
+  .mycontainer {
+    max-width: 540px;
+  }
+}
+@media (min-width: 640px) {
+  .mycontainer {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .mycontainer {
+    max-width: 900px;
+  }
+}
+/* @media (min-width: 1024px) {
+  .mycontainer {
+    max-width: 1024px;
+  }
+} */
+/* @media (min-width: 1280px) {
+  .mycontainer {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .mycontainer {
+    max-width: 1536px;
+  }
+} */
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ececec;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ececec;
+}
