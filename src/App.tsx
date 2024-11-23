@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="relative overflow-y-auto h-screen w-full bg-bg transition-colors duration-150 dark:bg-darkBg">
-      <div className="absolute bottom-1/2 right-1/2 z-0 translate-x-1/2 translate-y-1/2">
+      <div className="fixed bottom-1/2 right-1/2 z-0 translate-x-1/2 translate-y-1/2">
         <img src="/chips.gif" alt="CHIPS" width={150} />
       </div>
 
@@ -23,7 +23,7 @@ function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.7 }}
             className="relative h-full w-full"
           >
             <Home />
@@ -35,7 +35,7 @@ function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.7 }}
             className="relative h-full w-full"
           >
             <About />
@@ -47,7 +47,7 @@ function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.7 }}
             className="relative h-full w-full"
           >
             <Work />

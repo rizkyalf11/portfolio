@@ -1,19 +1,27 @@
 import React, { useEffect } from "react";
 
-export default function MyContainer({
-  children,
-  title,
-}: {
+type Props = {
   children: React.ReactNode;
   title: string;
-}) {
+};
+
+const MyContainer: React.FC<Props & React.HTMLAttributes<HTMLDivElement>> = ({
+  children,
+  title,
+  ...props
+}) => {
   useEffect(() => {
     document.title = `RzkyAlfi - ${title}`;
   }, [title]);
 
   return (
-    <div className="mycontainer pb-10 relative mx-auto min-h-full bg-bg px-4 pt-[60px] md:pt-[100px] dark:bg-darkBg">
+    <div
+      {...props}
+      className="mycontainer relative mx-auto min-h-full bg-bg px-4 pb-10 pt-[60px] dark:bg-darkBg md:pt-[100px]"
+    >
       {children}
     </div>
   );
-}
+};
+
+export default MyContainer;

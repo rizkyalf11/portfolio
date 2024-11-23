@@ -10,6 +10,7 @@ import { useMyStore } from "@/store/mystore";
 import { motion, useInView } from "framer-motion";
 import { opacity, slideUp } from "@/anim/anim";
 import { useRef } from "react";
+import MyParagraph from "@/components/ui/MyParagraph";
 
 const sosmed: { path: string; l: string; ref: string }[] = [
   { path: IG, l: L_IG, ref: "https://www.instagram.com/yourapoc4lypse" },
@@ -72,7 +73,7 @@ export default function Home() {
                 <motion.span
                   variants={slideUp}
                   custom={index}
-                  initial={{ y: "100%" }}
+                  initial="initial"
                   animate={isInViewNameRef ? "open" : "closed"}
                   className="mr-1"
                 >
@@ -81,11 +82,8 @@ export default function Home() {
               </span>
             ))}
           </p>
-          {/* <p className="text-base font-medium dark:text-darkText xs:text-lg">
-            Fullstack Developer
-          </p> */}
 
-          <p className="mt-6 text-sm font-medium leading-snug tracking-tight dark:text-darkText xs:mt-8 xs:text-base">
+          <MyParagraph className="mt-6">
             {paragraph.split(" ").map((word, index) => (
               <span
                 className="relative inline-flex overflow-hidden"
@@ -94,7 +92,7 @@ export default function Home() {
                 <motion.span
                   variants={slideUp}
                   custom={index}
-                  initial={{ y: "100%" }}
+                  initial="initial"
                   animate={isInViewNameRef ? "open" : "closed"}
                   className="mr-[3px]"
                 >
@@ -102,19 +100,13 @@ export default function Home() {
                 </motion.span>
               </span>
             ))}
-          </p>
-          {/* <p className="mt-6 text-sm font-medium leading-snug tracking-tight dark:text-darkText xs:mt-8 xs:text-base">
-            Proficient in front-end and back-end development, with a deep
-            understanding of modern web technologies. I focus on creating
-            user-centered designs that are not only visually appealing but also
-            highly performant and scalable.
-          </p> */}
+          </MyParagraph>
 
           <div className="mt-5 flex items-center gap-4 xs:mt-7">
             {sosmed.map((item, i) => (
               <motion.a
                 variants={opacity}
-                initial={{ opacity: 0 }}
+                initial="initial"
                 animate="open"
                 target="_blank"
                 href={item.ref}

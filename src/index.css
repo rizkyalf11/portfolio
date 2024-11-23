@@ -65,3 +65,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #ececec;
 }
+
+::selection {
+  background: #A388EE;
+}
