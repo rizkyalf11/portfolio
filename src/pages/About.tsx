@@ -4,17 +4,24 @@ import MyParagraph from "@/components/ui/MyParagraph";
 import { slideUp } from "@/anim/anim";
 import MyTitle from "@/components/ui/MyTitle";
 import { useRef } from "react";
+import MySubTitle from "@/components/ui/MySubTitle";
+import FeSkill from "@/components/ui/FESkill";
+import BeSkill from "@/components/ui/BESkill";
 
 export default function About() {
   const text1 =
     "I am 17 years old. My interest in web development began in the 9th grade of junior high school, when I first started learning to code. Since then, I have continuously honed my skills in both front-end and back-end development.";
   const text1REF = useRef<HTMLParagraphElement>(null);
-  const ViewT1 = useInView(text1REF);
+  const ViewT1 = useInView(text1REF, { once: true });
 
   const text2 =
     "I am skilled in creating functional and visually appealing websites, with a strong understanding of how to integrate both aspects to deliver efficient and user-friendly solutions. I believe that technology is a powerful tool for solving problems, and I am always eager to keep learning and growing in this field.";
   const text2REF = useRef<HTMLParagraphElement>(null);
-  const ViewT2 = useInView(text2REF);
+  const ViewT2 = useInView(text2REF, { once: true });
+
+  const text3 = "I am just a student :)";
+  const text3REF = useRef<HTMLParagraphElement>(null);
+  const ViewT3 = useInView(text3REF, { once: true });
 
   return (
     <MyContainer title="About">
@@ -58,6 +65,36 @@ export default function About() {
                   custom={index}
                   initial="initial"
                   animate={ViewT2 ? "open" : "closed"}
+                  className="mr-[3px]"
+                >
+                  {word}
+                </motion.span>
+              </span>
+            ))}
+          </MyParagraph>
+        </div>
+
+        <div className="col-span-12">
+          <MyTitle name="Skill" />
+          <MySubTitle className="mt-1" name="Front End" />
+          <FeSkill className="mt-1" />
+          <MySubTitle className="mt-2" name="Back End" />
+          <BeSkill className="mt-1" />
+        </div>
+
+        <div className="col-span-12">
+          <MyTitle name="Experience" />
+          <MyParagraph ref={text3REF} className="mt-1">
+            {text3.split(" ").map((word, index) => (
+              <span
+                className="relative inline-flex overflow-hidden"
+                key={index}
+              >
+                <motion.span
+                  variants={slideUp}
+                  custom={index}
+                  initial="initial"
+                  animate={ViewT3 ? "open" : "closed"}
                   className="mr-[3px]"
                 >
                   {word}

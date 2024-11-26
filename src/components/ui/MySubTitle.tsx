@@ -6,7 +6,7 @@ type Props = {
   name: string;
 };
 
-const MyTitle: React.FC<Props & HTMLAttributes<HTMLHeadingElement>> = ({
+const MySubTitle: React.FC<Props & HTMLAttributes<HTMLHeadingElement>> = ({
   name,
   ...props
 }) => {
@@ -17,7 +17,7 @@ const MyTitle: React.FC<Props & HTMLAttributes<HTMLHeadingElement>> = ({
     <h2
       {...props}
       ref={ref}
-      className={`text-xl font-semibold dark:text-darkText xs:text-2xl ${props.className || ""}`}
+      className={`text-lg font-semibold dark:text-darkText xs:text-xl ${props.className || ""}`}
     >
       {name.split(" ").map((word, index) => (
         <span className="relative inline-flex overflow-hidden">
@@ -37,4 +37,4 @@ const MyTitle: React.FC<Props & HTMLAttributes<HTMLHeadingElement>> = ({
   );
 };
 
-export default MyTitle;
+export default MySubTitle;

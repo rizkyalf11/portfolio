@@ -27,7 +27,7 @@ export default function Home() {
 
   const name = "Rizky Alfiansyah.";
   const nameRef = useRef(null);
-  const isInViewNameRef = useInView(nameRef);
+  const isInViewNameRef = useInView(nameRef, { once: true });
 
   const title = "Fullstack Developer";
   const paragraph =

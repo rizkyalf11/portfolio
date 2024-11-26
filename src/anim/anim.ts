@@ -64,3 +64,17 @@ export const opacity = {
     transition: { duration: 0.5 },
   },
 };
+
+export const opacity2 = {
+  initial: {
+    opacity: 0,
+  },
+  open: (i: number) => ({
+    opacity: 1,
+    transition: { duration: 0.5, delay: 0.30 * i },
+  }),
+  closed: {
+    opacity: 0,
+    transition: { duration: 0.5 },
+  },
+};
