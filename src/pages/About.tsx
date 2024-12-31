@@ -28,7 +28,7 @@ export default function About() {
       <div className="grid h-full w-full grid-cols-12 gap-7">
         <div className="col-span-12 h-[350px] overflow-hidden rounded-br-[50px] rounded-tl-[50px] bg-gray-400 outline md:col-span-5">
           <img
-            src="/me2.jpg"
+            src="/me2.webp"
             alt="ini saya"
             className="h-full w-full object-cover"
           />

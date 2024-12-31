@@ -25,7 +25,7 @@ export default function Navbar({ handleClick, page }: Props) {
 
   return (
     <>
-      <div className="fixed bottom-10 right-1/2 z-50 hidden translate-x-1/2 items-center gap-10 rounded-xl bg-white/5 p-2 backdrop-blur-sm md:flex">
+      <div className="fixed bottom-10 right-1/2 z-50 hidden translate-x-1/2 items-center gap-10 rounded-xl bg-white/5 p-2 backdrop-blur-sm dark:bg-darkBg/5 md:flex">
         <h1
           onClick={() => handleClick("home")}
           className="cursor-pointer select-none text-xl font-black tracking-tight text-text dark:text-darkText"

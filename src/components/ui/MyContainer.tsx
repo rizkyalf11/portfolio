@@ -17,7 +17,7 @@ const MyContainer: React.FC<Props & React.HTMLAttributes<HTMLDivElement>> = ({
   return (
     <div
       {...props}
-      className="mycontainer relative mx-auto min-h-full bg-bg px-4 pb-20 pt-[60px] dark:bg-darkBg md:pt-[100px]"
+      className="mycontainer relative mx-auto min-h-full bg-bg px-4 pb-10 md:pb-20 pt-[60px] dark:bg-darkBg md:pt-[100px]"
     >
       {children}
     </div>

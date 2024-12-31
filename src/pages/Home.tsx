@@ -38,7 +38,7 @@ export default function Home() {
       <div className="grid h-full w-full grid-cols-12 gap-7">
         <div className="col-span-12 h-[350px] overflow-hidden rounded-bl-[50px] rounded-tr-[50px] bg-gray-400 outline md:col-span-5">
           <img
-            src="/me1.jpg"
+            src="/me1.webp"
             alt="ini saya"
             className="h-full w-full object-cover"
           />
