@@ -67,7 +67,7 @@ const SatuWork: React.FC = () => {
               variants={slideUp}
               custom={index}
               initial="initial"
-              animate={isView2 ? "open" : "closed"}
+              animate={isView3 ? "open" : "closed"}
               className="mr-[3px]"
             >
               - {word}
