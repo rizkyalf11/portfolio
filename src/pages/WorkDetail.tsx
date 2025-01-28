@@ -8,7 +8,7 @@ export default function WorkDetail() {
   
   return (
     <MyContainer title="Work Detail">
-      <div className="grid h-full w-full grid-cols-12 gap-7">
+      <div className="grid h-full overflow-hidden w-full grid-cols-12 gap-7">
         <div className="col-span-12 flex gap-2 items-center">
           <FiArrowLeft
             onClick={() => setPage("work")}
