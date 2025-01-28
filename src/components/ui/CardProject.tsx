@@ -8,7 +8,7 @@ import { slideUp } from "@/anim/anim";
 
 const CardProject: React.FC<
   projectType & React.HTMLAttributes<HTMLDivElement>
-> = ({ name, desc, ...props }) => {
+> = ({ name, desc, cover, ...props }) => {
 
   const txtRef = useRef<HTMLParagraphElement>(null);
   const isView = useInView(txtRef, { once: true });
@@ -25,7 +25,7 @@ const CardProject: React.FC<
       </div>
       <div className="col-span-12 h-[200px] border-b-2 border-border bg-gray-400 dark:border-darkBorder">
         <img
-          src="/me2.webp"
+          src={cover}
           alt="ini saya"
           className="h-full w-full object-cover"
         />
