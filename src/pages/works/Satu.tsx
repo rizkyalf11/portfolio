@@ -6,11 +6,17 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const SatuWork: React.FC = () => {
   return (
     <div className="col-span-12">
       <Carousel
+        plugins={[
+          Autoplay({
+            delay: 2000,
+          }),
+        ]}
         opts={{
           align: "center",
         }}
@@ -18,7 +24,7 @@ const SatuWork: React.FC = () => {
       >
         <CarouselContent>
           {Array.from({ length: 4 }).map((_, index) => (
-            <CarouselItem key={index} className="basis-1 md:basis-1/2">
+            <CarouselItem key={index} className="md:basis-1/2">
               <img
                 className="border-2 border-border dark:border-darkBorder"
                 src={`/p1/${index + 1}.png`}
