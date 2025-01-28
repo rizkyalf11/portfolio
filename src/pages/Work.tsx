@@ -1,8 +1,5 @@
-import { Button } from "@/components/ui/button";
 import CardProject from "@/components/ui/CardProject";
 import MyContainer from "@/components/ui/MyContainer";
-import MyParagraph from "@/components/ui/MyParagraph";
-import MySubTitle from "@/components/ui/MySubTitle";
 import MyTitle from "@/components/ui/MyTitle";
 
 export type projectType = {
