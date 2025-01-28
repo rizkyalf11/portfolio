@@ -1,15 +1,16 @@
-import { useState } from "react";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
 import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./components/ui/Navbar";
+import { useMyStore } from "./store/mystore";
+import WorkDetail from "./pages/WorkDetail";
 
 function App() {
-  const [page, setPage] = useState("home");
+  const { page, setPage } = useMyStore((state) => state);
 
   return (
-    <div className="relative overflow-y-auto h-screen w-full bg-bg transition-colors duration-150 dark:bg-darkBg">
+    <div className="relative h-screen w-full overflow-y-auto bg-bg transition-colors duration-150 dark:bg-darkBg">
       <div className="fixed bottom-1/2 right-1/2 z-0 translate-x-1/2 translate-y-1/2">
         <img src="/chips.gif" alt="CHIPS" width={150} />
       </div>
@@ -51,6 +52,18 @@ function App() {
             className="relative h-full w-full"
           >
             <Work />
+          </motion.div>
+        )}
+        {page === "work-detail" && (
+          <motion.div
+            key="work-detail"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.7 }}
+            className="relative h-full w-full"
+          >
+            <WorkDetail />
           </motion.div>
         )}
       </AnimatePresence>

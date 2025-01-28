@@ -8,8 +8,7 @@ import { slideUp } from "@/anim/anim";
 
 const CardProject: React.FC<
   projectType & React.HTMLAttributes<HTMLDivElement>
-> = ({ name, desc, cover, ...props }) => {
-
+> = ({ name, desc, cover, cb, ...props }) => {
   const txtRef = useRef<HTMLParagraphElement>(null);
   const isView = useInView(txtRef, { once: true });
 
@@ -47,7 +46,9 @@ const CardProject: React.FC<
             </span>
           ))}
         </MyParagraph>
-        <Button className="mt-4">See Detail</Button>
+        <Button className="mt-4" onClick={() => cb()}>
+          See Detail
+        </Button>
       </div>
     </div>
   );
