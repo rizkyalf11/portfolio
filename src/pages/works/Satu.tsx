@@ -59,7 +59,7 @@ const SatuWork: React.FC = () => {
         ))}
       </MyParagraph>
       <MySubTitle name="Back End" className="mt-2" />
-      <MyParagraph ref={txtRef2}>
+      <MyParagraph ref={txtRef3}>
         {"NodeJS,ExpressJS,MySQL".split(",").map((word, index) => (
           <>
           <span className="relative inline-flex overflow-hidden" key={index}>
