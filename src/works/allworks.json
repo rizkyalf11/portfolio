@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "webname": "MySMK",
+      "desc": "A school information system platform of SMK Madinatul Quran designed to simplify access to learning and administrative information for student guardians, teachers, and students online.",
+      "fe_stack": ["ReactJS", "Framer Motion", "TailwindCSS"],
+      "be_stack": ["NodeJS", "ExpressJS", "MySQL"],
+      "img_id": 1,
+      "img_qty": 4
+    },
+    {
+      "webname": "Library Management",
+      "desc": "A website designed to simplify library management, especially the process of borrowing and returning books. it also includes several useful features.",
+      "fe_stack": ["NextJS", "TailwindCSS"],
+      "be_stack": ["NodeJS", "NestJS", "MySQL"],
+      "img_id": 2,
+      "img_qty": 5
+    },
+    {
+      "webname": "Suggestion System",
+      "desc": "A website for managing suggestions and input data from employees in a company",
+      "fe_stack": ["NextJS", "TailwindCSS"],
+      "be_stack": ["Google Apps Script", "Google Sheets"],
+      "img_id": 3,
+      "img_qty": 4
+    }
+  ]
+}

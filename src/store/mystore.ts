@@ -5,8 +5,8 @@ interface MyStore {
   setIsDarkMode: () => void;
   page: string;
   setPage: (page: string) => void;
-  work: React.ReactNode | null;
-  setWork: (work: React.ReactNode) => void;
+  work:  null | string;
+  setWork: (work: string) => void;
 }
 
 export const useMyStore = create<MyStore>()((set) => ({
@@ -15,5 +15,5 @@ export const useMyStore = create<MyStore>()((set) => ({
   page: "home",
   setPage: (page: string) => set(() => ({ page: page })),
   work: null,
-  setWork: (work: React.ReactNode) => set(() => ({ work: work })),
+  setWork: (work: string) => set(() => ({ work: work })),
 }));

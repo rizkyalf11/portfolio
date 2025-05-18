@@ -2,6 +2,7 @@ import MyContainer from "@/components/ui/MyContainer";
 import MyTitle from "@/components/ui/MyTitle";
 import { useMyStore } from "@/store/mystore";
 import { FiArrowLeft } from "react-icons/fi";
+import DynamicWork from "./works/Dynamic";
 
 export default function WorkDetail() {
   const { setPage, work } = useMyStore((state) => state);
@@ -19,7 +20,8 @@ export default function WorkDetail() {
           <MyTitle className="col-span-12" name="Work Detail" />
         </div>
 
-        {work}
+        {/* {work} */}
+        <DynamicWork name={work} />
       </div>
     </MyContainer>
   );

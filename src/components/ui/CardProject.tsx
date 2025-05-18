@@ -24,8 +24,8 @@ const CardProject: React.FC<
       </div>
       <div className="col-span-12 h-[200px] border-b-2 border-border bg-gray-400 dark:border-darkBorder">
         <img
-          src={cover}
-          alt="ini saya"
+          src={`/p${cover}/1.webp`}
+          alt={name}
           className="h-full w-full object-cover"
         />
       </div>

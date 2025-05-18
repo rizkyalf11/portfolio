@@ -25,7 +25,7 @@ export default function CarouselWork({ work, qty }: { work: number, qty: number 
           <CarouselItem key={index} className="md:basis-1/2">
             <img
               className="border-2 border-border dark:border-darkBorder"
-              src={`/p${work}/${index + 1}.png`}
+              src={`/p${work}/${index + 1}.webp`}
               alt=""
             />
           </CarouselItem>
