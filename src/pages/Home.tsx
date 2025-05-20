@@ -13,7 +13,7 @@ import { useRef } from "react";
 import MyParagraph from "@/components/ui/MyParagraph";
 
 const sosmed: { path: string; l: string; ref: string }[] = [
-  { path: IG, l: L_IG, ref: "https://www.instagram.com/yourapoc4lypse" },
+  { path: IG, l: L_IG, ref: "https://www.instagram.com/alfirzkyyyy" },
   { path: YT, l: L_YT, ref: "https://www.youtube.com/@Rizky-Alfiansyah" },
   {
     path: LK,
@@ -125,8 +125,8 @@ export default function Home() {
           <Button
             onClick={() => {
               const link = document.createElement("a");
-              link.href = "/cv_rizkyalfiansyah.pdf";
-              link.download = "cv_rizkyalfiansyah.pdf";
+              link.href = "/RIZKY ALFIANSYAH CV.pdf";
+              link.download = "RIZKY ALFIANSYAH CV.pdf";
               link.click();
             }}
             className="mt-5 xs:mt-7"
