@@ -30,8 +30,8 @@ const CardProject: React.FC<
         />
       </div>
       <div className="col-span-12 p-4">
-        <MySubTitle name={name} className="dark:text-black" />
-        <MyParagraph ref={txtRef} className="mt-2 line-clamp-2 dark:text-black">
+        <MySubTitle enableDark={false} name={name} />
+        <MyParagraph enableDark={false} ref={txtRef} className="mt-2 line-clamp-2">
           {desc.split(" ").map((word, index) => (
             <span className="relative inline-flex overflow-hidden" key={index}>
               <motion.span

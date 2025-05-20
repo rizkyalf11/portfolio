@@ -19,9 +19,9 @@ export default function About() {
   const text2REF = useRef<HTMLParagraphElement>(null);
   const ViewT2 = useInView(text2REF, { once: true });
 
-  const text3 = "I am just a student :)";
-  const text3REF = useRef<HTMLParagraphElement>(null);
-  const ViewT3 = useInView(text3REF, { once: true });
+  // const text3 = "I am just a fresh graduate :)";
+  // const text3REF = useRef<HTMLParagraphElement>(null);
+  // const ViewT3 = useInView(text3REF, { once: true });
 
   return (
     <MyContainer title="About">
@@ -82,7 +82,7 @@ export default function About() {
           <BeSkill className="mt-1" />
         </div>
 
-        <div className="col-span-12">
+        {/* <div className="col-span-12">
           <MyTitle name="Experience" />
           <MyParagraph ref={text3REF} className="mt-1">
             {text3.split(" ").map((word, index) => (
@@ -102,7 +102,7 @@ export default function About() {
               </span>
             ))}
           </MyParagraph>
-        </div>
+        </div> */}
       </div>
     </MyContainer>
   );

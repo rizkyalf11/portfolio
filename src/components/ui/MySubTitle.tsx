@@ -4,10 +4,12 @@ import React, { HTMLAttributes, useRef } from "react";
 
 type Props = {
   name: string;
+  enableDark?: boolean;
 };
 
 const MySubTitle: React.FC<Props & HTMLAttributes<HTMLHeadingElement>> = ({
   name,
+  enableDark = true,
   ...props
 }) => {
   const ref = useRef(null);
@@ -17,7 +19,7 @@ const MySubTitle: React.FC<Props & HTMLAttributes<HTMLHeadingElement>> = ({
     <h2
       {...props}
       ref={ref}
-      className={`text-lg font-semibold dark:text-darkText xs:text-xl ${props.className || ""}`}
+      className={`text-lg font-semibold xs:text-xl ${enableDark ? "dark:text-darkText" : ""} ${props.className || ""}`}
     >
       {name.split(" ").map((word, index) => (
         <span className="relative inline-flex overflow-hidden">
